@@ -1,0 +1,194 @@
+"use client"
+
+import AnimatedTextUnderlign from '@/components/AnimatedTextUnderlign'
+import CardWithEffect from '@/components/CardWithEffect'
+import ScoreBoard from '@/components/animata/graphs/bar-chart'
+import Cycling from '@/components/animata/widget/cycling'
+import DirectionCard from '@/components/animata/widget/direction-card'
+import ExpenseTracker from '@/components/animata/widget/expense-tracker'
+import { BentoCard } from '@/components/ui/bento-grid'
+import { progress } from 'framer-motion'
+import { ArrowUp, ArrowLeft, Baby, Code, Code2Icon, CornerUpLeft, CornerUpRight, FingerprintIcon, Magnet } from 'lucide-react'
+
+import React  from 'react'
+import { Chart } from './components/Chart'
+import { AnimatedCursor } from './components/AnimatedCursor'
+// import { SafariDemo } from '@/components/SafariDemo'
+import AnimatedGradientText from '@/components/ui/animated-gradient-text'
+import { AnimatedGradientTextDemo } from '@/components/AnimatedGradientTextDemo'
+import { RippleDemo } from '@/components/RippleDemo'
+import WeatherCard from '@/components/animata/widget/weather-card'
+import { SafariDemo } from '@/components/SafariDemo'
+import Safari from '@/components/Safari'
+import BarPoll from '@/components/BarPoll'
+import ScrollReveal from '@/components/animata/text/scroll-reveal'
+import { ScrollObserver } from '@/components/ScrollObserver'
+import Reminder from '@/components/animata/widget/reminder'
+import { AiFillAccountBook } from 'react-icons/ai'
+import { BsRobot } from 'react-icons/bs'
+import { FaRobot } from 'react-icons/fa'
+import { CgDesignmodo } from 'react-icons/cg'
+import { MdDesignServices } from 'react-icons/md'
+import AvatarList from '@/components/animata/list/avatar-list'
+import Eight from '@/components/animata/bento-grid/eight'
+import Three from '@/components/animata/bento-grid/three'
+import BarChart from '@/components/animata/graphs/bar-chart'
+import WeeklyProgress from '@/components/animata/widget/weekly-progress'
+import Marquee from '@/components/animata/container/marquee'
+import Example from '@/components/HorizontalScrollCarousel'
+import { Pointer } from '@/components/Pointer'
+import { RevealBento } from '@/components/RevealBento'
+import WaterTracker from '@/components/animata/widget/water-tracker'
+import HeroSection from '@/components/animata/hero/hero-section'
+
+const items = [
+    { label: "Task A", progress: 40, className: "bg-blue-500 rounded-md" },
+    { label: "Task B", progress: 75, className: "bg-red-500 rounded-md" },
+    { label: "Task C", progress: 60, className: "bg-yellow-500 rounded-md" },
+    { label: "Task D", progress: 90, className: "bg-green-500 rounded-md" },
+  ];
+
+const LandingPage = () => {
+  return (
+    <>
+    <div className='bg-neutral-950'>
+        <section className="text-gray-600 bg-neutral-950 body-font">
+  <div className="container px-5 py-24 mx-auto">
+    <div className="flex flex-col text-center w-full mb-20">
+      <img className='mx-auto' src='https://i.ibb.co/GWWmXCY/IMG-3763.gif' height={75} width={75} />
+      {/* <h2 className="text-xs text-orange tracking-widest font-medium title-font mb-1">All new Gen-3 AI</h2> */}
+      <AnimatedGradientTextDemo/>
+
+        <AnimatedTextUnderlign/>
+
+    
+
+        <svg className='absolute text-orange' width="149" height="122" viewBox="0 0 149 122" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fillRule="evenodd" clipRule="evenodd" d="M137.863 0.579489C137.792 0.790681 137.722 1.35386 137.722 1.84664C137.722 2.33943 137.558 4.1463 137.346 5.88277C136.877 9.8485 137.041 15.8792 137.722 19.3287C137.98 20.6193 138.191 21.7222 138.191 21.7926C138.168 21.9804 137.182 20.7601 134.86 17.733C131.763 13.65 130.355 12.0778 127.54 9.59038C119.399 2.38636 111.869 -0.523407 104.408 0.696818C100.584 1.30693 94.9773 3.77085 91.4113 6.37556C83.6695 12.0778 77.734 22.9659 76.4672 33.8072C76.1856 36.1537 76.3029 43.0762 76.6548 46.2675L76.7956 47.6286L75.4115 46.995C68.2795 43.7332 64.6432 42.3722 59.482 41.0346C53.9688 39.6032 48.7372 39.087 43.529 39.439C25.3239 40.6592 10.0982 57.4842 3.55276 83.6252C2.49705 87.896 0.854832 96.0386 0.362167 99.5585C-0.623162 106.434 0.479469 115.609 2.73165 119.246C3.5293 120.514 4.46771 121.523 4.86653 121.523C5.33574 121.523 5.2419 121.077 4.32695 119.246C2.96625 116.477 2.49705 113.755 2.49705 108.499C2.47359 103.454 2.56743 102.891 4.37387 95.0061C7.16564 82.8743 9.32398 76.4916 13.3591 68.5601C16.5497 62.2713 19.5292 58.0709 23.7989 53.8235C29.0775 48.5672 34.661 45.4932 40.8545 44.4137C44.1155 43.8505 50.7078 44.0852 54.5788 44.883C60.655 46.1737 64.9717 47.7459 73.1827 51.7116C78.3674 54.2225 79.4701 54.5041 80.8073 53.6124C82.4495 52.5564 82.6372 51.1954 81.9803 45.6809C81.7692 43.9444 81.5815 40.5419 81.5815 37.9841C81.558 34.0653 81.6284 33.0797 82.0742 31.0382C83.4114 24.8432 86.0624 19.4226 90.0272 14.7294C93.7808 10.2709 99.9509 6.77447 105.37 6.04703C109.499 5.48385 114.168 6.98567 119.024 10.4821C121.769 12.4298 126.766 17.4514 129.088 20.6193L131.083 23.3179L130.215 23.4822C129.745 23.5526 127.235 23.7638 124.678 23.9046C119.306 24.2096 118.555 24.3739 117.429 25.336C115.575 26.9786 115.904 29.9822 118.086 31.0147C119.212 31.5544 123.012 32.0472 127.282 32.2349C129.229 32.3053 133.945 32.5869 137.769 32.8685C145.511 33.4317 145.98 33.3848 147.458 32.0941C149.288 30.475 149.194 28.4569 147.059 23.5291C146.214 21.5814 145.112 18.7421 144.643 17.1933C142.602 10.5994 139.974 2.59755 139.458 1.44773C138.895 0.180568 138.168 -0.218351 137.863 0.579489Z" fill="currentColor"/>
+</svg>
+
+
+{/* <svg  width="149" height="122" viewBox="0 0 149 122" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fillRule="evenodd" clipRule="evenodd" d="M137.863 0.579489C137.792 0.790681 137.722 1.35386 137.722 1.84664C137.722 2.33943 137.558 4.1463 137.346 5.88277C136.877 9.8485 137.041 15.8792 137.722 19.3287C137.98 20.6193 138.191 21.7222 138.191 21.7926C138.168 21.9804 137.182 20.7601 134.86 17.733C131.763 13.65 130.355 12.0778 127.54 9.59038C119.399 2.38636 111.869 -0.523407 104.408 0.696818C100.584 1.30693 94.9773 3.77085 91.4113 6.37556C83.6695 12.0778 77.734 22.9659 76.4672 33.8072C76.1856 36.1537 76.3029 43.0762 76.6548 46.2675L76.7956 47.6286L75.4115 46.995C68.2795 43.7332 64.6432 42.3722 59.482 41.0346C53.9688 39.6032 48.7372 39.087 43.529 39.439C25.3239 40.6592 10.0982 57.4842 3.55276 83.6252C2.49705 87.896 0.854832 96.0386 0.362167 99.5585C-0.623162 106.434 0.479469 115.609 2.73165 119.246C3.5293 120.514 4.46771 121.523 4.86653 121.523C5.33574 121.523 5.2419 121.077 4.32695 119.246C2.96625 116.477 2.49705 113.755 2.49705 108.499C2.47359 103.454 2.56743 102.891 4.37387 95.0061C7.16564 82.8743 9.32398 76.4916 13.3591 68.5601C16.5497 62.2713 19.5292 58.0709 23.7989 53.8235C29.0775 48.5672 34.661 45.4932 40.8545 44.4137C44.1155 43.8505 50.7078 44.0852 54.5788 44.883C60.655 46.1737 64.9717 47.7459 73.1827 51.7116C78.3674 54.2225 79.4701 54.5041 80.8073 53.6124C82.4495 52.5564 82.6372 51.1954 81.9803 45.6809C81.7692 43.9444 81.5815 40.5419 81.5815 37.9841C81.558 34.0653 81.6284 33.0797 82.0742 31.0382C83.4114 24.8432 86.0624 19.4226 90.0272 14.7294C93.7808 10.2709 99.9509 6.77447 105.37 6.04703C109.499 5.48385 114.168 6.98567 119.024 10.4821C121.769 12.4298 126.766 17.4514 129.088 20.6193L131.083 23.3179L130.215 23.4822C129.745 23.5526 127.235 23.7638 124.678 23.9046C119.306 24.2096 118.555 24.3739 117.429 25.336C115.575 26.9786 115.904 29.9822 118.086 31.0147C119.212 31.5544 123.012 32.0472 127.282 32.2349C129.229 32.3053 133.945 32.5869 137.769 32.8685C145.511 33.4317 145.98 33.3848 147.458 32.0941C149.288 30.475 149.194 28.4569 147.059 23.5291C146.214 21.5814 145.112 18.7421 144.643 17.1933C142.602 10.5994 139.974 2.59755 139.458 1.44773C138.895 0.180568 138.168 -0.218351 137.863 0.579489Z" fill="currentColor"/>
+</svg> */}
+
+{/* <svg  width="91" height="195" viewBox="0 0 91 195" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fillRule="evenodd" clipRule="evenodd" d="M83.8275 2.83924C71.2259 10.0664 63.6462 14.9471 55.0809 21.3765C41.8223 31.3725 31.6613 40.3126 29.0565 44.3251C27.6954 46.4604 27.32 47.7744 27.4373 50.074C27.5546 52.4439 28.2821 53.9222 30.2533 55.729C33.8671 59.061 40.4143 61.2901 54.4943 63.9417C58.9764 64.7864 60.9476 65.42 60.9476 65.9831C60.9476 66.5463 58.6948 69.3151 56.6767 71.2392C54.0719 73.75 51.1855 76.0261 45.6239 79.9916C37.6687 85.6466 34.313 88.5797 31.3797 92.4984C29.2442 95.2907 28.2352 97.5433 28.1413 99.6551C28.0005 102.377 28.7983 104.067 30.8869 105.381C33.1397 106.812 34.2895 107 42.761 107.328C52.6873 107.704 53.0628 107.844 51.115 110.543C50.6223 111.247 47.9471 113.992 45.178 116.667C40.2501 121.407 38.0677 123.777 35.6037 127.062C33.7263 129.573 29.9248 135.439 26.5221 141.024C18.4027 154.399 16.5957 158.575 12.2309 173.804C11.48 176.432 10.7995 178.567 10.7056 178.567C10.424 178.567 10.0486 177.324 9.79044 175.447C9.3915 172.725 7.98349 167.375 7.30295 165.967C6.62242 164.535 5.87149 163.878 4.6043 163.55C2.72697 163.034 0.708845 164.23 0.145647 166.154C-0.112485 166.952 -0.0420511 167.75 0.474214 171.364C0.826212 173.71 1.20167 176.948 1.34247 178.567C1.92913 186.146 2.0934 187.648 2.39846 189.244C2.77393 191.285 3.36058 192.482 4.44004 193.514C6.05924 195.063 8.28857 195.415 10.3771 194.43C11.0342 194.148 12.536 192.975 13.7563 191.848C16.8773 188.986 20.3035 186.452 34.4303 176.573C43.066 170.542 45.9055 168.477 46.3983 167.914C46.7268 167.492 46.5156 167.07 46.0228 167.07C45.53 167.07 33.5386 171.786 29.6197 173.522C27.9301 174.273 25.0906 175.611 23.2837 176.549C21.4768 177.465 19.928 178.239 19.8341 178.286C19.7403 178.333 19.7637 178.075 19.8576 177.699C24.5509 162.94 26.0293 159.608 33.6324 146.726C41.8223 132.858 43.9812 129.807 50.7396 122.721C55.034 118.192 56.9348 115.775 58.1081 113.359C58.8121 111.857 58.9529 111.294 59.0233 109.534C59.1172 107.586 59.0937 107.375 58.3897 105.944C57.1694 103.456 54.9636 101.931 51.6314 101.251C50.7631 101.086 48.041 100.805 45.577 100.664C41.0949 100.406 37.2463 100.054 36.4954 99.8194C35.9557 99.6551 36.1669 99.2562 38.0677 96.7924C40.4613 93.7185 43.1364 91.3251 50.0356 86.1159C55.2687 82.1738 58.0612 79.8273 60.666 77.1993C67.0489 70.7465 68.9497 65.6546 66.2041 62.4399C64.5379 60.5158 62.778 59.8353 55.1983 58.2866C43.77 55.9636 37.7391 53.8753 34.9701 51.3176C33.304 49.7924 33.6325 48.713 36.7535 45.4044C44.6852 37.004 59.9855 24.4504 75.6142 13.4923C85.6814 6.42936 89.4595 3.47279 90.14 1.99451C90.5155 1.22017 90.5154 1.10285 90.1869 0.563162C89.9522 0.234654 89.5768 0 89.2717 0C88.9901 0 86.5496 1.29056 83.8275 2.83924Z" fill="currentColor"/>
+</svg> */}
+
+<svg className='absolute right-20 text-orange' width="236" height="66" viewBox="0 0 236 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fillRule="evenodd" clipRule="evenodd" d="M23.9244 0.127533C18.3186 0.573079 9.85122 2.47255 4.6676 4.44233C1.59496 5.61482 0 7.46734 0 9.81232C0 11.2897 0.422197 12.298 1.43077 13.2594C2.39244 14.174 3.02573 14.4085 5.74654 14.9713C10.4611 15.9327 20.4765 20.4351 27.5365 24.7968C31.5708 27.2825 32.8374 27.8218 32.8374 27.0479C32.8374 26.6727 31.0313 24.5154 27.513 20.6931C26.3168 19.3799 25.3317 18.2308 25.3317 18.1605C25.3317 17.9963 26.7625 18.0901 34.362 18.7467C54.9088 20.5055 75.5964 24.7733 95.463 31.3861C103.156 33.9422 107.894 35.7244 116.221 39.1949C123.633 42.2669 125.322 42.8766 126.846 42.8766C127.925 42.8766 128.183 42.7828 128.957 42.0793C129.731 41.3523 129.825 41.1413 129.802 40.2033C129.778 39.0777 129.848 39.1949 127.034 35.7244C125.298 33.5904 124.078 31.4096 124.078 30.4247C124.078 29.4398 124.829 29.0412 126.893 29.0412C131.584 29.0412 140.802 32.5587 157.338 40.6723C166.72 45.2685 169.605 46.5816 170.708 46.7692C172.514 47.0506 173.944 46.1361 174.367 44.4477C174.46 44.049 174.226 42.0089 173.804 39.4294C173.053 34.974 173.03 33.8249 173.71 32.5117C174.179 31.6207 174.718 31.3861 176.313 31.3861C180.911 31.3861 190.762 36.0761 205.562 45.2919C214.85 51.0605 219.541 54.3435 227.845 60.886C230.542 63.0199 233.052 64.9194 233.427 65.107C234.318 65.5291 235.35 65.1539 235.726 64.2159C236.218 63.0434 235.515 62.1523 231.175 58.2596C224.537 52.3034 220.104 48.8328 212.974 44.0022C198.854 34.4112 187.22 28.1266 180.488 26.4617C171.599 24.234 166.908 28.9943 168.855 38.1632C169.136 39.4998 169.347 40.6019 169.3 40.6488C169.253 40.6957 167.424 39.7343 165.242 38.5149C159.59 35.3492 148.777 30.0261 144.367 28.2204C137.542 25.383 133.39 24.1167 129.567 23.6477C124.782 23.0615 120.889 24.703 119.716 27.7749C119.223 29.0881 119.364 31.5503 120.044 33.098C120.302 33.7077 120.49 34.2001 120.443 34.2001C120.396 34.2001 118.262 33.1683 115.681 31.902C90.4436 19.4267 60.1159 11.8525 28.9907 10.2579C22.7516 9.9296 22.9158 10.0468 26.6452 8.63983C29.366 7.63148 30.7264 6.0838 30.7264 4.06711C30.703 3.26982 29.882 1.72214 29.1315 1.089C28.4043 0.479303 26.5279 -0.0835156 25.4959 0.0102836C25.2144 0.0337334 24.5108 0.080633 23.9244 0.127533Z" fill="currentColor"/>
+</svg>
+
+
+
+
+
+
+
+    </div>
+   <div className='flex flex-wrap'>
+      <Safari/>
+   </div>
+
+  </div>
+  <ScrollReveal className="md:text-4xl h-screen text-center">
+  <React.Fragment key=".0">
+    From Imagination <Baby className="scroll-baby size-5 transition-all duration-75 ease-in-out md:size-8" /> to Innovation with Generative AI{' '}
+    
+   
+    <FaRobot className="scroll-baby1 size-5 transition-all duration-75 ease-in-out md:size-8" />
+    {/* Displaying a file as an image (if it's an image file) */}
+    .
+
+    {/* <BsRobot className="scroll-baby1 size-5 transition-all duration-75 ease-in-out md:size-8" /> */}
+    <div className="my-4 w-full" />
+      From generating high-quality content and code <Code className="scroll-baby2 size-5 transition-all duration-75 ease-in-out md:size-8" /> to designing stunning visuals and enhancing workflows <MdDesignServices className="scroll-baby3 size-5 transition-all duration-75 ease-in-out md:size-8" />, we bring cutting-edge technology to your fingertips <FingerprintIcon className="scroll-baby4 size-5 transition-all duration-75 ease-in-out md:size-8" />.
+    <div className="mt-4 w-full">
+      - Sam Altman 
+    </div>
+  </React.Fragment>
+  
+</ScrollReveal>
+
+
+
+    {/* <BarPoll/> */}
+
+
+
+
+  {/* <Marquee>
+  <div className='p-16  text-white flex gap-10'>
+  <DirectionCard
+  directionValues={[
+    {
+      direction: 'right',
+      distance: 350,
+      iconType: CornerUpRight, // Use the actual React component
+      to: 'Kumar Park'
+    },
+    {
+      direction: 'left',
+      distance: 700,
+      iconType: CornerUpLeft, // Use the actual React component
+      to: 'Lake Town'
+    },
+    {
+      direction: 'left',
+      distance: 100,
+      iconType: ArrowLeft, // Use the actual React component
+      to: 'Karve Road'
+    },
+    {
+      direction: 'straight',
+      distance: 1000,
+      iconType: ArrowUp, // Use the actual React component
+      to: 'Kamraj Avenue'
+    }
+  ]}
+/>
+
+<WeeklyProgress/>
+<Cycling/>
+<WeatherCard/>
+<Reminder/>
+  </div>
+  </Marquee> */}
+
+
+</section>
+
+
+<div>
+
+  <Example/>
+  <RevealBento/>
+  <HeroSection/>
+
+</div>
+
+
+
+
+
+
+
+
+  {/* <Eight/> */}
+{/* <AvatarList/> */}
+
+{/* <Eight/> */}
+
+
+
+
+    </div>
+
+   
+
+    </>
+  )
+}
+
+export default LandingPage

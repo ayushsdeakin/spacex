@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.scroll-baby[style*="opacity: 1"] {
+  @apply text-yellow-300 dark:text-yellow-500;
+}
+
+.scroll-baby1[style*="opacity: 1"] {
+  @apply text-pink-400 dark:text-pink-400;
+}
+
+.scroll-baby2[style*="opacity: 1"] {
+  @apply text-green-400 dark:text-pink-400;
+}
+
+.scroll-baby3[style*="opacity: 1"] {
+  @apply text-red-500 dark:text-pink-400;
+}
+
+.scroll-baby4[style*="opacity: 1"] {
+  @apply text-blue-500 dark:text-pink-400;
+}
+
+.scroll-file[style*="opacity: 1"] {
+  @apply text-blue-300 dark:text-blue-500;
+}
+/* Hide the scrollbar but keep the scroll functionality */
+.y-scroll-container {
+  overflow-y: scroll; /* Enable scrolling */
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer */
+}
+
+.y-scroll-container::-webkit-scrollbar { /* For Chrome, Safari, and Opera */
+  display: none;
+}
+
